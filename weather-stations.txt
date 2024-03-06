@@ -1,0 +1,12 @@
+istanbul;
+cape town;
+new york;
+helsinki;
+california;
+miami;
+toronto;
+perth;
+vancouver;
+london;
+barcelona;
+madrid;
