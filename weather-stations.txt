@@ -10,3 +10,6 @@ vancouver;
 london;
 barcelona;
 madrid;
+moscow;
+johannesburg;
+perth;
