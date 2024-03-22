@@ -1,12 +1,19 @@
 [package]
 name = "one_brc"
-version = "0.1.0"
+version = "0.3.0"
 edition = "2021"
 
 [[bin]]
 name = 'generate'
 
+[[bench]]
+name = "benchmark"
+
 [dependencies]
+clap = { version = "4.5.3", features = ["derive"] }
+criterion = "0.5.1"
+profiling = "1.0.15"
+puffin = "0.19.0"
 rand = "0.8.5"
 rayon = "1.9.0"
 tokio = "1.36.0"

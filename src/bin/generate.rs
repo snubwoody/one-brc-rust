@@ -1,12 +1,11 @@
 use std::{fs,env};
 use std::io::{Write,BufWriter};
 use rand::prelude::*;
+use clap::Parser;
 
 fn main(){
-	let lines:u32 = 1000;	
-	let args:Vec<_> = env::args().collect();
-	println!("args:",{args});
-	generate_measurements(lines,"dummy_measurements.txt");
+	let args = Args::parse();
+	generate_measurements(args.count,args.file.as_str());
 }
 
 fn generate_measurements(count:u32,file_path:&str){
@@ -48,4 +47,14 @@ fn get_weather_stations() -> Vec<String> {
 	}
 
 	weather_stations
+}
+
+#[derive(Parser, Debug)]
+#[command(version, about, long_about = None)]
+struct Args {
+    #[arg(short, long)]
+    file: String,
+
+    #[arg(short, long)]
+    count: u32,
 }

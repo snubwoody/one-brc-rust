@@ -1,0 +1,10 @@
+helsinki;-4
+new york;34
+miami;34
+london;34
+miami;28
+new york;-9
+new york;33
+california;31
+london;11
+helsinki;38
